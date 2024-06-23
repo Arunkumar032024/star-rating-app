@@ -3,9 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Create an interactive star rating app with jQuery that includes user authentication. Easily integrate secure login and registration features to ensure user-specific ratings. Perfect for websites needing a reliable and dynamic rating system.">
+    <!-- add favicon icon -->
+    <link rel="shortcut icon" href="./assets/icon/favicon.ico" type="image/x-icon">
     <title>Star Rating App</title>
+    <!-- font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- own css -->
+    <link rel="stylesheet" href="./assets/css/main.css">
 </head>
 <body>
-    
+    <main class="container">
+       <div class="form-container">
+            <h2>sign up</h2>
+            <p>please sign up for gives star rating</p>
+            <form action="/">
+                <div class="input-box">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" />
+                </div>
+                <div class="input-box">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" />
+                </div>
+                <div class="input-box">
+                    <label for="mobile">Mobile</label>
+                    <input type="tel" id="mobile" />
+                </div>
+                <div class="input-box">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" />
+                    <i class="fa-solid fa-eye"></i>
+                    <i class="fa-solid fa-eye-slash"></i>
+                </div>
+                <div class="input-box">
+                    <label for="confirm-password">Confirm Password</label>
+                    <input type="password" id="confirm-password" />
+                    <i class="fa-solid fa-eye"></i>
+                    <i class="fa-solid fa-eye-slash"></i>
+                </div>
+                <div class="input-box">
+                    <input type="submit" value="Sign Up" />
+                </div>
+            </form>
+       </div>
+       <div class="star-rating-container hide"></div>
+    </main>
+
+
+    <script src="./assets/js/main.js"></script>
 </body>
 </html>

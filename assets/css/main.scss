@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+NZ:wght@100..400&display=swap');
+$color: #37B7C3;
+$color1: #F5F7F8;
+$color2: #F4CE14;
+$color3: #379777;
+$color4: #45474B;
+
+@mixin flexBox($fd, $jc, $ai){
+    display: flex;
+    flex-direction: $fd;
+    justify-content: $jc;
+    align-items: $ai;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Playwrite NZ", cursive;
+}
+body{
+    background-color: $color;
+    width: 100%;
+    min-height: 100vh;
+    @include flexBox(row, center, center);
+    .container{
+        background-color: $color1;
+        padding: 1.125rem;
+        border-radius: 0.625rem;
+        box-shadow: 0 0 5px $color4;
+        width: 95%;
+        // min-width: 400px;
+        max-width: 350px;
+        .form-container{
+            h2{
+                font-size: 2rem;
+                text-align: center;
+                color: $color2;
+            }
+            p{
+                font-size: 0.625rem;
+                text-align: center;
+                color: $color4;
+            }
+            .input-box{
+                margin: 0.813rem;
+                @include flexBox(column, center, flex-start);
+                position: relative;
+                label{
+                    font-size: 0.813rem;
+                    color: $color2;
+                    font-weight: 600;
+                }
+                input{
+                    width: 100%;
+                    border: none;
+                    outline: none;
+                    background-color: transparent;
+                    border-bottom: 1px solid #F4CE14;
+                }
+                i{
+                    position: absolute;
+                    top: 50%;
+                    right: 10px;
+                    transform: translateY(-50%);
+                    color: $color2;
+                    cursor: pointer;
+                }
+                i.eye{
+                    color: $color4;
+                }
+                input[type="submit"]{
+                    width: fit-content;
+                    margin: 0.813rem auto; 
+                    background-color: $color1;
+                    padding: 0.413rem 0.813rem;
+                    border-radius: 5px;
+                    color: $color2;
+                    border: 1px solid $color2;
+                    cursor: pointer;
+                    transition: all .3s ease-in-out;
+                    &:hover{
+                        color: $color1;
+                        background-color: $color2;
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+.hide{
+    display: none;
+}
+.show{
+    display: block;
+}
