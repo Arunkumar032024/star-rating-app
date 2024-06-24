@@ -17,11 +17,13 @@ body {
 }
 body .container {
   background-color: #F5F7F8;
-  padding: 1.125rem;
   border-radius: 0.625rem;
   box-shadow: 0 0 5px #45474B;
   width: 95%;
   max-width: 350px;
+}
+body .container .form-container {
+  margin: 1.125rem;
 }
 body .container .form-container h2 {
   font-size: 2rem;
@@ -79,6 +81,68 @@ body .container .form-container .input-box input[type=submit] {
 body .container .form-container .input-box input[type=submit]:hover {
   color: #F5F7F8;
   background-color: #F4CE14;
+}
+body .container .form-container .input-box span {
+  font-size: 0.625rem;
+  color: red;
+  margin-top: 0.125rem;
+}
+body .container .star-rating-container .star-heading {
+  width: 100%;
+  height: 100px;
+  background-color: #F4CE14;
+  border-top-left-radius: 0.625rem;
+  border-top-right-radius: 0.625rem;
+  position: relative;
+}
+body .container .star-rating-container .star-heading i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 5rem;
+  padding: 0.813rem;
+  border-radius: 50%;
+  background-color: #F5F7F8;
+  color: #F4CE14;
+  box-shadow: 0 0 1px #45474B;
+}
+body .container .star-rating-container .content {
+  margin-top: 60px;
+  padding: 30px 0;
+  text-align: center;
+}
+body .container .star-rating-container .content p {
+  font-size: 0.813rem;
+  line-height: 1.125rem;
+  font-weight: bold;
+  text-transform: capitalize;
+  color: #45474B;
+}
+body .container .star-rating-container .content .stars {
+  margin: 3rem 0;
+}
+body .container .star-rating-container .content .stars i {
+  font-size: 3rem;
+  cursor: pointer;
+  color: #45474B;
+}
+body .container .star-rating-container .content .stars i:hover {
+  color: #F4CE14;
+}
+body .container .star-rating-container button {
+  padding: 0.413rem 0.813rem;
+  border: 2px solid #F4CE14;
+  border-radius: 3px;
+  font-weight: bold;
+  color: #F4CE14;
+  cursor: pointer;
+  background-color: #F5F7F8;
+  transition: all 0.3s ease-in-out;
+}
+body .container .star-rating-container button:hover {
+  background-color: #F4CE14;
+  color: #F5F7F8;
 }
 
 .hide {
