@@ -127,7 +127,15 @@ body .container .star-rating-container .content .stars i {
   cursor: pointer;
   color: #45474B;
 }
-body .container .star-rating-container .content .stars i:hover {
+body .container .star-rating-container .content .star-error {
+  font-size: 0.625rem;
+  font-weight: bold;
+  color: red;
+  margin-bottom: 1rem;
+}
+body .container .star-rating-container .content .feedback {
+  font-size: 2rem;
+  font-weight: bolder;
   color: #F4CE14;
 }
 body .container .star-rating-container button {

@@ -7,28 +7,99 @@ $(document).ready(function(){
         confirmPassword:''
     }
 
-    const formContainer = document.querySelector(".form-container");
-    const form = formContainer.querySelector("form");
-    const name = form.querySelector("#name")
-    const email = form.querySelector("#email")
-    const mobile = form.querySelector("#mobile")
-    const password = form.querySelector("#password")
-    const confirmPassword = form.querySelector("#confirm-password")
+    // code for star rating
+    let s1 = $('#s1');
+    let s2 = $('#s2');
+    let s3 = $('#s3');
+    let s4 = $('#s4');
+    let s5 = $('#s5');
 
-    const signUpBtn = form.querySelector('#btn');
+    let rate = 0;
 
-    const errorSpans = form.querySelectorAll('span');
-    const nameError = form.querySelector("#name-error")
-    const emailError = form.querySelector("#email-error")
-    const mobileError = form.querySelector("#mobile-error")
-    const passwordError = form.querySelector("#password-error")
-    const confirmPasswordError = form.querySelector("#confirm-password-error")
+    function starColor(color, ...stars){
+        stars.map(star => {
+            star.css('color', `${color}`);
+        })
+    }
 
-
-
-
-    form.addEventListener('submit',(e)=>{
-        e.preventDefault();
-        alert('hi')
+    s1.on({
+        'click': function (){
+            rate = 1;   
+            console.log(rate)
+            starColor('rd', s1)
+        },
+        'mouseover': function(){
+            starColor('#F4CE14', s1)
+        },
+        'mouseleave': function(){
+            rate != 1 ? starColor('#45474B', s1) : null ;
+            
+        },
+        
     })
+    s2.on({
+        'click': function (){
+            rate = 2;   
+            console.log(rate)
+        },
+        'mouseover': function(){
+            starColor('#F4CE14', s1, s2);
+        },
+        'mouseleave': function(){
+            rate != 2 ?  starColor('#45474B', s1, s2) : null ;
+        },
+    })
+    s3.on({
+        'click': function (){
+            rate = 3;   
+            console.log(rate)
+        },
+        'mouseover': function(){
+            starColor('#F4CE14', s1, s2, s3);
+        },
+        'mouseleave': function(){
+            rate != 3 ? starColor('#45474B', s1, s2, s3) : null ;
+        },
+    })
+    s4.on({
+        'click': function (){
+            rate = 4;   
+            console.log(rate)
+        },
+        'mouseover': function(){
+            starColor('#F4CE14', s1, s2, s3, s4);
+        },
+        'mouseleave': function(){
+            rate != 4 ? starColor('#45474B', s1, s2, s3, s4) : null ;
+        },
+    })
+    s5.on({
+        'click': function (){
+            rate = 5;   
+            console.log(rate)
+        },
+        'mouseover': function(){
+            starColor('#F4CE14', s1, s2, s3, s4, s5);
+        },
+        'mouseleave': function(){
+            rate != 5 ? starColor('#45474B', s1, s2, s3, s4, s5) : null ;
+        },
+    })
+
+    const starRateBtn = $(".star-rating-container #submit");
+    
+    starRateBtn.click(function(){
+        if(rate !== 0){
+            $(this).hide();
+            $("#s1, #s2, #s3, #s4, #s5").css('pointer-events', 'none');
+            $(".feedback").removeClass('hide');
+        }else{
+            $('.star-error').removeClass('hide')
+            $('.star-error').text('Please select a rating')
+            setTimeout(()=>{
+                $('.star-error').addClass('hide')
+            }, 1000)
+        }
+    })
+    // End code for star rating
 })

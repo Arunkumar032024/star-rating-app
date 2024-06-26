@@ -132,10 +132,19 @@ body{
                         font-size: 3rem;
                         cursor: pointer;
                         color: $color4;
-                        &:hover{
-                            color: $color2;
-                        }
                     }
+                }
+                .star-error{
+                    font-size: 0.625rem;
+                    font-weight: bold;
+                    color: red;
+                    margin-bottom: 1rem;
+                }
+                .feedback{
+                    font-size: 2rem;
+                    font-weight: bolder;
+                    color: $color2;
+                    
                 }
             }
             button{
