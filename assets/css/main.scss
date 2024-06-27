@@ -32,68 +32,7 @@ body{
         width: 95%;
         // min-width: 400px;
         max-width: 350px;
-        .form-container{
-            margin: 1.125rem;
-            h2{
-                font-size: 2rem;
-                text-align: center;
-                color: $color2;
-            }
-            p{
-                font-size: 0.625rem;
-                text-align: center;
-                color: $color4;
-            }
-            .input-box{
-                margin: 0.813rem;
-                @include flexBox(column, center, flex-start);
-                position: relative;
-                label{
-                    font-size: 0.813rem;
-                    color: $color2;
-                    font-weight: 600;
-                }
-                input{
-                    width: 100%;
-                    border: none;
-                    outline: none;
-                    background-color: transparent;
-                    border-bottom: 1px solid #F4CE14;
-                }
-                i{
-                    position: absolute;
-                    top: 50%;
-                    right: 10px;
-                    transform: translateY(-50%);
-                    color: $color2;
-                    cursor: pointer;
-                }
-                i.eye{
-                    color: $color4;
-                }
-                input[type="submit"]{
-                    width: fit-content;
-                    margin: 0.813rem auto; 
-                    background-color: $color1;
-                    padding: 0.413rem 0.813rem;
-                    border-radius: 5px;
-                    color: $color2;
-                    border: 1px solid $color2;
-                    cursor: pointer;
-                    transition: all .3s ease-in-out;
-                    &:hover{
-                        color: $color1;
-                        background-color: $color2;
-                    }
-                }
-                span{
-                    font-size: 0.625rem;
-                    color: red;
-                    margin-top: 0.125rem;
-                }
-            }
-        }
-
+      
         .star-rating-container{
             .star-heading{
                 width: 100%;
